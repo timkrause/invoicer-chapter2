@@ -1,0 +1,14 @@
+{
+    "ApplicationVersion": {
+        "ApplicationName": "timivcr202002241129", 
+        "Status": "UNPROCESSED", 
+        "VersionLabel": "invoicer-api", 
+        "ApplicationVersionArn": "arn:aws:elasticbeanstalk:eu-central-1:455017032009:applicationversion/timivcr202002241129/invoicer-api", 
+        "DateCreated": "2020-02-24T10:33:40.147Z", 
+        "DateUpdated": "2020-02-24T10:33:40.147Z", 
+        "SourceBundle": {
+            "S3Bucket": "timivcr202002241129", 
+            "S3Key": "app-version.json"
+        }
+    }
+}

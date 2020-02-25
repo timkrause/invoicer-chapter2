@@ -1,0 +1,18 @@
+{
+    "ApplicationName": "timivcr202002241021", 
+    "EnvironmentName": "timivcr202002241021-invoicer-api", 
+    "Status": "Launching", 
+    "Description": "Invoicer API environment", 
+    "EnvironmentArn": "arn:aws:elasticbeanstalk:eu-central-1:455017032009:environment/timivcr202002241021/timivcr202002241021-invoicer-api", 
+    "PlatformArn": "arn:aws:elasticbeanstalk:eu-central-1::platform/Docker running on 64bit Amazon Linux/2.14.1", 
+    "SolutionStackName": "64bit Amazon Linux 2018.03 v2.14.1 running Docker 18.09.9-ce", 
+    "EnvironmentId": "e-purvhdy9ak", 
+    "Health": "Grey", 
+    "Tier": {
+        "Version": "1.0", 
+        "Type": "Standard", 
+        "Name": "WebServer"
+    }, 
+    "DateUpdated": "2020-02-24T09:25:36.101Z", 
+    "DateCreated": "2020-02-24T09:25:36.101Z"
+}

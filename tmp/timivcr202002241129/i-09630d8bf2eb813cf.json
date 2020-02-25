@@ -1,0 +1,174 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "Monitoring": {
+                        "State": "disabled"
+                    }, 
+                    "PublicDnsName": "ec2-18-195-101-2.eu-central-1.compute.amazonaws.com", 
+                    "State": {
+                        "Code": 0, 
+                        "Name": "pending"
+                    }, 
+                    "EbsOptimized": false, 
+                    "LaunchTime": "2020-02-24T10:33:27.000Z", 
+                    "PublicIpAddress": "18.195.101.2", 
+                    "PrivateIpAddress": "172.31.46.49", 
+                    "ProductCodes": [], 
+                    "VpcId": "vpc-c08e42aa", 
+                    "CpuOptions": {
+                        "CoreCount": 1, 
+                        "ThreadsPerCore": 1
+                    }, 
+                    "StateTransitionReason": "", 
+                    "InstanceId": "i-09630d8bf2eb813cf", 
+                    "EnaSupport": true, 
+                    "ImageId": "ami-02f04e050d9538ed8", 
+                    "PrivateDnsName": "ip-172-31-46-49.eu-central-1.compute.internal", 
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "awseb-e-ndahemvay3-stack-AWSEBSecurityGroup-K3129DKO6VF9", 
+                            "GroupId": "sg-005ab8d56c0dbfab0"
+                        }
+                    ], 
+                    "ClientToken": "7035c1db-08f1-2bc4-c1b4-b92c534da0b1", 
+                    "SubnetId": "subnet-df11f2a3", 
+                    "InstanceType": "t2.micro", 
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    }, 
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use", 
+                            "MacAddress": "06:26:18:8f:3e:98", 
+                            "SourceDestCheck": true, 
+                            "VpcId": "vpc-c08e42aa", 
+                            "Description": "", 
+                            "NetworkInterfaceId": "eni-072ed93403b8422b0", 
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-31-46-49.eu-central-1.compute.internal", 
+                                    "PrivateIpAddress": "172.31.46.49", 
+                                    "Primary": true, 
+                                    "Association": {
+                                        "PublicIp": "18.195.101.2", 
+                                        "PublicDnsName": "ec2-18-195-101-2.eu-central-1.compute.amazonaws.com", 
+                                        "IpOwnerId": "amazon"
+                                    }
+                                }
+                            ], 
+                            "PrivateDnsName": "ip-172-31-46-49.eu-central-1.compute.internal", 
+                            "InterfaceType": "interface", 
+                            "Attachment": {
+                                "Status": "attaching", 
+                                "DeviceIndex": 0, 
+                                "DeleteOnTermination": true, 
+                                "AttachmentId": "eni-attach-0b950b2871bcaf978", 
+                                "AttachTime": "2020-02-24T10:33:27.000Z"
+                            }, 
+                            "Groups": [
+                                {
+                                    "GroupName": "awseb-e-ndahemvay3-stack-AWSEBSecurityGroup-K3129DKO6VF9", 
+                                    "GroupId": "sg-005ab8d56c0dbfab0"
+                                }
+                            ], 
+                            "Ipv6Addresses": [], 
+                            "OwnerId": "455017032009", 
+                            "PrivateIpAddress": "172.31.46.49", 
+                            "SubnetId": "subnet-df11f2a3", 
+                            "Association": {
+                                "PublicIp": "18.195.101.2", 
+                                "PublicDnsName": "ec2-18-195-101-2.eu-central-1.compute.amazonaws.com", 
+                                "IpOwnerId": "amazon"
+                            }
+                        }
+                    ], 
+                    "SourceDestCheck": true, 
+                    "Placement": {
+                        "Tenancy": "default", 
+                        "GroupName": "", 
+                        "AvailabilityZone": "eu-central-1b"
+                    }, 
+                    "Hypervisor": "xen", 
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda", 
+                            "Ebs": {
+                                "Status": "attaching", 
+                                "DeleteOnTermination": true, 
+                                "VolumeId": "vol-0096f163fb617bd40", 
+                                "AttachTime": "2020-02-24T10:33:27.000Z"
+                            }
+                        }, 
+                        {
+                            "DeviceName": "/dev/xvdcz", 
+                            "Ebs": {
+                                "Status": "attaching", 
+                                "DeleteOnTermination": true, 
+                                "VolumeId": "vol-05141137983fa7af5", 
+                                "AttachTime": "2020-02-24T10:33:27.000Z"
+                            }
+                        }
+                    ], 
+                    "Architecture": "x86_64", 
+                    "RootDeviceType": "ebs", 
+                    "IamInstanceProfile": {
+                        "Id": "AIPAWT4JA5FE2BIVTCGWA", 
+                        "Arn": "arn:aws:iam::455017032009:instance-profile/testprofile"
+                    }, 
+                    "RootDeviceName": "/dev/xvda", 
+                    "VirtualizationType": "hvm", 
+                    "Tags": [
+                        {
+                            "Value": "AWSEBAutoScalingGroup", 
+                            "Key": "aws:cloudformation:logical-id"
+                        }, 
+                        {
+                            "Value": "arn:aws:cloudformation:eu-central-1:455017032009:stack/awseb-e-ndahemvay3-stack/f3288440-56f0-11ea-8744-0a64b3109ac6", 
+                            "Key": "aws:cloudformation:stack-id"
+                        }, 
+                        {
+                            "Value": "timivcr202002241129-invoicer-api", 
+                            "Key": "elasticbeanstalk:environment-name"
+                        }, 
+                        {
+                            "Value": "timivcr202002241129-invoicer-api", 
+                            "Key": "Name"
+                        }, 
+                        {
+                            "Value": "awseb-e-ndahemvay3-stack", 
+                            "Key": "aws:cloudformation:stack-name"
+                        }, 
+                        {
+                            "Value": "e-ndahemvay3", 
+                            "Key": "elasticbeanstalk:environment-id"
+                        }, 
+                        {
+                            "Value": "tim", 
+                            "Key": "Owner"
+                        }, 
+                        {
+                            "Value": "awseb-e-ndahemvay3-stack-AWSEBAutoScalingGroup-1OY2EFXCK19UL", 
+                            "Key": "aws:autoscaling:groupName"
+                        }
+                    ], 
+                    "HibernationOptions": {
+                        "Configured": false
+                    }, 
+                    "MetadataOptions": {
+                        "State": "pending", 
+                        "HttpEndpoint": "enabled", 
+                        "HttpTokens": "optional", 
+                        "HttpPutResponseHopLimit": 1
+                    }, 
+                    "AmiLaunchIndex": 0
+                }
+            ], 
+            "ReservationId": "r-0f304be1a8406be07", 
+            "RequesterId": "053592188284", 
+            "Groups": [], 
+            "OwnerId": "455017032009"
+        }
+    ]
+}

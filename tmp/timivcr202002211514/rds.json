@@ -1,0 +1,91 @@
+{
+    "DBInstances": [
+        {
+            "PubliclyAccessible": true, 
+            "MasterUsername": "invoicer", 
+            "MonitoringInterval": 0, 
+            "LicenseModel": "postgresql-license", 
+            "VpcSecurityGroups": [
+                {
+                    "Status": "active", 
+                    "VpcSecurityGroupId": "sg-0f0163c0fefdc1496"
+                }
+            ], 
+            "InstanceCreateTime": "2020-02-21T14:17:48.079Z", 
+            "CopyTagsToSnapshot": false, 
+            "OptionGroupMemberships": [
+                {
+                    "Status": "in-sync", 
+                    "OptionGroupName": "default:postgres-9-6"
+                }
+            ], 
+            "PendingModifiedValues": {}, 
+            "Engine": "postgres", 
+            "MultiAZ": false, 
+            "DBSecurityGroups": [], 
+            "DBParameterGroups": [
+                {
+                    "DBParameterGroupName": "default.postgres9.6", 
+                    "ParameterApplyStatus": "in-sync"
+                }
+            ], 
+            "PerformanceInsightsEnabled": false, 
+            "AutoMinorVersionUpgrade": true, 
+            "PreferredBackupWindow": "23:14-23:44", 
+            "DBSubnetGroup": {
+                "Subnets": [
+                    {
+                        "SubnetStatus": "Active", 
+                        "SubnetIdentifier": "subnet-5515e319", 
+                        "SubnetAvailabilityZone": {
+                            "Name": "eu-central-1c"
+                        }
+                    }, 
+                    {
+                        "SubnetStatus": "Active", 
+                        "SubnetIdentifier": "subnet-df11f2a3", 
+                        "SubnetAvailabilityZone": {
+                            "Name": "eu-central-1b"
+                        }
+                    }, 
+                    {
+                        "SubnetStatus": "Active", 
+                        "SubnetIdentifier": "subnet-7cac1816", 
+                        "SubnetAvailabilityZone": {
+                            "Name": "eu-central-1a"
+                        }
+                    }
+                ], 
+                "DBSubnetGroupName": "default", 
+                "VpcId": "vpc-c08e42aa", 
+                "DBSubnetGroupDescription": "default", 
+                "SubnetGroupStatus": "Complete"
+            }, 
+            "ReadReplicaDBInstanceIdentifiers": [], 
+            "AllocatedStorage": 5, 
+            "DBInstanceArn": "arn:aws:rds:eu-central-1:455017032009:db:timivcr202002211514", 
+            "BackupRetentionPeriod": 1, 
+            "DBName": "invoicer", 
+            "PreferredMaintenanceWindow": "sun:21:08-sun:21:38", 
+            "Endpoint": {
+                "HostedZoneId": "Z1RLNUO7B9Q6NB", 
+                "Port": 5432, 
+                "Address": "timivcr202002211514.cltc0gfcf7p0.eu-central-1.rds.amazonaws.com"
+            }, 
+            "DBInstanceStatus": "backing-up", 
+            "IAMDatabaseAuthenticationEnabled": false, 
+            "EngineVersion": "9.6.2", 
+            "DeletionProtection": false, 
+            "AvailabilityZone": "eu-central-1b", 
+            "DomainMemberships": [], 
+            "StorageType": "gp2", 
+            "DbiResourceId": "db-K7YLOKZMM677FXZE3SMKIWAY7E", 
+            "CACertificateIdentifier": "rds-ca-2019", 
+            "StorageEncrypted": false, 
+            "AssociatedRoles": [], 
+            "DBInstanceClass": "db.t2.micro", 
+            "DbInstancePort": 0, 
+            "DBInstanceIdentifier": "timivcr202002211514"
+        }
+    ]
+}

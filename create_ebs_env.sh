@@ -10,7 +10,7 @@ fail() {
     exit 1
 }
 
-export AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
+export AWS_DEFAULT_REGION=${AWS_REGION:-eu-central-1}
 
 datetag=$(date +%Y%m%d%H%M)
 identifier=$(whoami)ivcr$datetag
@@ -92,6 +92,7 @@ aws elasticbeanstalk create-environment \
     --tier "Name=WebServer,Type=Standard,Version=''" > tmp/$identifier/ebcreateapienv.json || fail
 apieid=$(jq -r '.EnvironmentId' tmp/$identifier/ebcreateapienv.json)
 echo "API environment $apieid is being created"
+
 
 # grab the instance ID of the API environment, then its security group, and add that to the RDS security group
 while true;

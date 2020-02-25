@@ -1,0 +1,24 @@
+{
+    "Application": {
+        "ApplicationName": "rootivcr202002211509", 
+        "Description": "Invoicer  202002211509", 
+        "DateCreated": "2020-02-21T14:12:25.975Z", 
+        "ConfigurationTemplates": [], 
+        "DateUpdated": "2020-02-21T14:12:25.975Z", 
+        "ResourceLifecycleConfig": {
+            "VersionLifecycleConfig": {
+                "MaxCountRule": {
+                    "DeleteSourceFromS3": false, 
+                    "Enabled": false, 
+                    "MaxCount": 200
+                }, 
+                "MaxAgeRule": {
+                    "DeleteSourceFromS3": false, 
+                    "Enabled": false, 
+                    "MaxAgeInDays": 180
+                }
+            }
+        }, 
+        "ApplicationArn": "arn:aws:elasticbeanstalk:eu-central-1:455017032009:application/rootivcr202002211509"
+    }
+}

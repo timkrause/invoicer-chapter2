@@ -12,7 +12,7 @@
     {
         "Namespace": "aws:elasticbeanstalk:application:environment", 
         "OptionName": "INVOICER_POSTGRES_PASSWORD", 
-        "Value": "POSTGRESPASSREPLACEME"
+        "Value": "hAj0KAsMAp2m8YosNFPPvHX0aCP-6SEeBpmg"
     }, 
     {
         "Namespace": "aws:elasticbeanstalk:application:environment", 
@@ -22,7 +22,7 @@
     {
         "Namespace": "aws:elasticbeanstalk:application:environment", 
         "OptionName": "INVOICER_POSTGRES_HOST", 
-        "Value": "POSTGRESHOSTREPLACEME"
+        "Value": "timivcr202002241104.cltc0gfcf7p0.eu-central-1.rds.amazonaws.com"
     },
     {
         "Namespace": "aws:elasticbeanstalk:application:environment", 
@@ -32,6 +32,6 @@
     {
         "Namespace": "aws:autoscaling:launchconfiguration",
         "OptionName": "IamInstanceProfile",
-        "Value": "testprofile"
+        "Value": "ebs-default-test"
     }
 ]
