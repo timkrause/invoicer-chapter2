@@ -31,16 +31,12 @@ import (
 )
 
 
-func init() {
-	// initialize the logger
-	mozlog.Logger.LoggerName = "invoicer"
-	log.SetFlags(0)
-}
 
 type invoicer struct {
 	db    *gorm.DB
 	store *gormstore.Store
 }
+
 
 func main() {
 	var (
@@ -65,8 +61,21 @@ func main() {
 		panic("failed to connect database")
 	}
 
+	// initialize the session store
+	iv.store = gormstore.New(db, CSRFKey)
+	quit := make(chan struct{})
+	go iv.store.PeriodicCleanup(1*time.Hour, quit)
+
 	iv.db = db
 	iv.db.AutoMigrate(&Invoice{}, &Charge{})
+	iv.db.LogMode(true)
+
+	//initialize CSRF Token
+	CSRFKey = make([]byte, 128)
+	_, err = rand.Read(CSRFKey)
+	if err != nil {
+		log.Fatal("error initializing CSRF Key:", err)
+	}
 
 	// register routes
 	r := mux.NewRouter()
@@ -79,20 +88,18 @@ func main() {
 	r.HandleFunc("/invoice/delete/{id:[0-9]+}", iv.deleteInvoice).Methods("GET")
 	r.HandleFunc("/__version__", getVersion).Methods("GET")
 
+	r.HandleFunc("/authenticate", iv.getAuthenticate).Methods("GET")
+	r.HandleFunc("/oauth2callback", iv.getOAuth2Callback).Methods("GET")
+
 	// handle static files
 	r.Handle("/statics/{staticfile}",
 		http.StripPrefix("/statics/", http.FileServer(http.Dir("./statics"))),
 	).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8080",
-		HandleMiddlewares(
-			r,
-			addRequestID(),
-			logRequest(),
-			setResponseHeaders(),
-		),
-	))
+	// all set, start the http handler
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
+
 
 type Invoice struct {
 	gorm.Model
